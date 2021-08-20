@@ -239,6 +239,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configuration.NotificationSettings" class="md-nav__link">
+    NotificationSettings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration.Settings" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuration.StatusPageComponentSettings" class="md-nav__link">
     StatusPageComponentSettings
   </a>
@@ -295,6 +309,20 @@
         <li class="md-nav__item">
   <a href="#configuration.CheckSettings" class="md-nav__link">
     CheckSettings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration.NotificationSettings" class="md-nav__link">
+    NotificationSettings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration.Settings" class="md-nav__link">
+    Settings
   </a>
   
 </li>
@@ -397,6 +425,131 @@
 
 
 
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="configuration.NotificationSettings" class="doc doc-heading">
+        <code>NotificationSettings</code>
+
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Notification Settings</p>
+
+<p><strong>Attributes:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>smtp_url</code></td>
+        <td><code>str</code></td>
+        <td><p>The URL of the SMTP host</p></td>
+      </tr>
+      <tr>
+        <td><code>smtp_port</code></td>
+        <td><code>int</code></td>
+        <td><p>The SMTP Port to use</p></td>
+      </tr>
+      <tr>
+        <td><code>smtp_sender_id</code></td>
+        <td><code>str</code></td>
+        <td><p>The SMTP user</p></td>
+      </tr>
+      <tr>
+        <td><code>smtp_sender_Pass</code></td>
+        <td><code>str</code></td>
+        <td><p>The SMTP user's password</p></td>
+      </tr>
+      <tr>
+        <td><code>smsEmail</code></td>
+        <td><code>str</code></td>
+        <td><p>The email to receive notifications</p></td>
+      </tr>
+  </tbody>
+</table>
+
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="configuration.Settings" class="doc doc-heading">
+        <code>Settings</code>
+
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Settings</p>
+<p>This class represents the entire structure of the configuration file (<code>monitor.config.json</code> by default).</p>
+
+<p><strong>Attributes:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>statusChecks</code></td>
+        <td><code>List[configuration.CheckSettings]</code></td>
+        <td><p>The collection of statusCheck settings</p></td>
+      </tr>
+      <tr>
+        <td><code>notification</code></td>
+        <td><code>NotificationSettings</code></td>
+        <td><p>The settings object for notifications</p></td>
+      </tr>
+      <tr>
+        <td><code>statusPage</code></td>
+        <td><code>StatusPageSettings</code></td>
+        <td><p>The settings object for StatusPage.io</p></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
 
 
   <div class="doc doc-object doc-class">
@@ -414,6 +567,23 @@
 
       <p>Settings for StatusPage.io components</p>
 
+<p><strong>Attributes:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>componentId</code></td>
+        <td><code>str</code></td>
+        <td><p>The ID of the component in your statuspage.io page</p></td>
+      </tr>
+  </tbody>
+</table>
 
 
     </div>
