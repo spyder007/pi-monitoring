@@ -207,6 +207,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../enums/" class="md-nav__link">
+        Enums
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../healthchecks-reference/" class="md-nav__link">
         HealthChecks
       </a>
@@ -291,6 +306,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#statuspage_io_client.StatusPageClient" class="md-nav__link">
+    StatusPageClient
+  </a>
+  
+    <nav class="md-nav" aria-label="StatusPageClient">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#statuspage_io_client.StatusPageClient.createIncident" class="md-nav__link">
+    createIncident()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statuspage_io_client.StatusPageClient.getComponent" class="md-nav__link">
+    getComponent()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statuspage_io_client.StatusPageClient.getUnresolvedIncidents" class="md-nav__link">
+    getUnresolvedIncidents()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statuspage_io_client.StatusPageClient.updateComponent" class="md-nav__link">
+    updateComponent()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statuspage_io_client.StatusPageClient.updateIncident" class="md-nav__link">
+    updateIncident()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -331,6 +394,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#statuspage_io_client.StatusPageClient" class="md-nav__link">
+    StatusPageClient
+  </a>
+  
+    <nav class="md-nav" aria-label="StatusPageClient">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#statuspage_io_client.StatusPageClient.createIncident" class="md-nav__link">
+    createIncident()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statuspage_io_client.StatusPageClient.getComponent" class="md-nav__link">
+    getComponent()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statuspage_io_client.StatusPageClient.getUnresolvedIncidents" class="md-nav__link">
+    getUnresolvedIncidents()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statuspage_io_client.StatusPageClient.updateComponent" class="md-nav__link">
+    updateComponent()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statuspage_io_client.StatusPageClient.updateIncident" class="md-nav__link">
+    updateIncident()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -362,6 +473,457 @@
 
 
 
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="statuspage_io_client.StatusPageClient" class="doc doc-heading">
+        <code>StatusPageClient</code>
+
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>StatusPageClient Class</p>
+<p>The StatusPageClient class provides methods for interacting with the <a href="https://developer.statuspage.io/">Statuspage.io's APIs</a></p>
+
+<p><strong>Attributes:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>component_status_list</code></td>
+        <td><code>List[str]</code></td>
+        <td><p>A list of valid component status codes for StatusPage.io</p></td>
+      </tr>
+      <tr>
+        <td><code>incident_status_list</code></td>
+        <td><code>List[str]</code></td>
+        <td><p>A list of valid incident status codes for live incidents in StatusPage.io</p></td>
+      </tr>
+      <tr>
+        <td><code>scheduled_incident_status_list</code></td>
+        <td><code>List[str]</code></td>
+        <td><p>A list of valid incident status codes for scheduledStatusPage.io</p></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="statuspage_io_client.StatusPageClient.createIncident" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">createIncident</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">payload</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Create Incident</p>
+<p>Create a new incident using the provided payload as the object body.  The payload object will be processed using <code>json.dumps()</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>payload</code></td>
+        <td><code>object</code></td>
+        <td><p>An object representing the JSON payload.  Valid object representation can be found in the <a href="https://developer.statuspage.io/#operation/postPagesPageIdIncidents">Statuspage.io docs</a>. </p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>object</code></td>
+      <td><p>A SimpleNamespace object created from the JSON return.  Object representation can be found in the <a href="https://developer.statuspage.io/#operation/postPagesPageIdIncidents">Statuspage.io docs</a>.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>pi-monitoring\statuspage_io_client.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">createIncident</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">payload</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">object</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;  Create Incident</span>
+
+<span class="sd">    Create a new incident using the provided payload as the object body.  The payload object will be processed using `json.dumps()`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        payload: An object representing the JSON payload.  Valid object representation can be found in the [Statuspage.io docs](https://developer.statuspage.io/#operation/postPagesPageIdIncidents). </span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A SimpleNamespace object created from the JSON return.  Object representation can be found in the [Statuspage.io docs](https://developer.statuspage.io/#operation/postPagesPageIdIncidents).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">incidentUrl</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="s2">&quot;https://api.statuspage.io/v1/pages/</span><span class="si">{0}</span><span class="s2">/incidents&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pageId</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Creating incident: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">incidentUrl</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">incidentUrl</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">getHeaders</span><span class="p">(),</span>
+                      <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">payload</span><span class="p">))</span>
+    <span class="n">resultObject</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">(</span><span class="n">object_hook</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">SimpleNamespace</span><span class="p">(</span><span class="o">**</span><span class="n">d</span><span class="p">))</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Create Incident Response: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">resultObject</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">resultObject</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="statuspage_io_client.StatusPageClient.getComponent" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">getComponent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">componentId</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Retrieve Component Information</p>
+<p>Retrieve the current component information using the provided componentId.  </p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>componentId</code></td>
+        <td><code>str</code></td>
+        <td><p>The id of the component to retrieve.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>object</code></td>
+      <td><p>A SimpleNamespace object created from the JSON return.  Object representation can be found in the <a href="https://developer.statuspage.io/#operation/getPagesPageIdComponentsComponentId">Statuspage.io docs</a>.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>pi-monitoring\statuspage_io_client.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">getComponent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">componentId</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">object</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;  Retrieve Component Information</span>
+
+<span class="sd">    Retrieve the current component information using the provided componentId.  </span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        componentId: The id of the component to retrieve.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A SimpleNamespace object created from the JSON return.  Object representation can be found in the [Statuspage.io docs](https://developer.statuspage.io/#operation/getPagesPageIdComponentsComponentId).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">componentUrl</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="s2">&quot;https://api.statuspage.io/v1/pages/</span><span class="si">{0}</span><span class="s2">/components/</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pageId</span><span class="p">,</span> <span class="n">componentId</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Retrieving component from StatusPage: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">componentUrl</span><span class="p">)</span>
+    <span class="n">component</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">componentUrl</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">getHeaders</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">component</span><span class="o">.</span><span class="n">json</span><span class="p">(</span><span class="n">object_hook</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">SimpleNamespace</span><span class="p">(</span><span class="o">**</span><span class="n">d</span><span class="p">))</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="statuspage_io_client.StatusPageClient.getUnresolvedIncidents" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">getUnresolvedIncidents</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Retrieve Unresolved Incidents</p>
+<p>Retrieve all the current unresolved incidents.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>object</code></td>
+      <td><p>A SimpleNamespace object created from the JSON return.  Object representation can be found in the <a href="https://developer.statuspage.io/#operation/getPagesPageIdIncidentsUnresolved">Statuspage.io docs</a>.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>pi-monitoring\statuspage_io_client.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">getUnresolvedIncidents</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">object</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;  Retrieve Unresolved Incidents</span>
+
+<span class="sd">    Retrieve all the current unresolved incidents.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A SimpleNamespace object created from the JSON return.  Object representation can be found in the [Statuspage.io docs](https://developer.statuspage.io/#operation/getPagesPageIdIncidentsUnresolved).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Retrieving unresolved incidents&quot;</span><span class="p">)</span>
+    <span class="n">unresolvedIncidentsUrl</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="s2">&quot;https://api.statuspage.io/v1/pages/</span><span class="si">{0}</span><span class="s2">/incidents/unresolved&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pageId</span><span class="p">)</span>
+    <span class="n">unresolvedIncidentsResponse</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+        <span class="n">unresolvedIncidentsUrl</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">getHeaders</span><span class="p">())</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">unresolvedIncidentsResponse</span><span class="o">.</span><span class="n">json</span><span class="p">(</span>
+        <span class="n">object_hook</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">SimpleNamespace</span><span class="p">(</span><span class="o">**</span><span class="n">d</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="statuspage_io_client.StatusPageClient.updateComponent" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">updateComponent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">componentId</span><span class="p">,</span> <span class="n">payload</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Update Component Information</p>
+<p>Update the given component using the provided payload as the object body.  The payload object will be processed using <code>json.dumps()</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>componentId</code></td>
+        <td><code>str</code></td>
+        <td><p>The id of the component to update.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>payload</code></td>
+        <td><code>object</code></td>
+        <td><p>An object representing the JSON payload.  Valid object representation can be found in the <a href="https://developer.statuspage.io/#operation/putPagesPageIdComponentsComponentId">Statuspage.io docs</a>. </p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>object</code></td>
+      <td><p>A SimpleNamespace object created from the JSON return.  Object representation can be found in the <a href="https://developer.statuspage.io/#operation/putPagesPageIdComponentsComponentId">Statuspage.io docs</a>.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>pi-monitoring\statuspage_io_client.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">updateComponent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">componentId</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">payload</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">object</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;  Update Component Information</span>
+
+<span class="sd">    Update the given component using the provided payload as the object body.  The payload object will be processed using `json.dumps()`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        componentId: The id of the component to update.</span>
+<span class="sd">        payload: An object representing the JSON payload.  Valid object representation can be found in the [Statuspage.io docs](https://developer.statuspage.io/#operation/putPagesPageIdComponentsComponentId). </span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A SimpleNamespace object created from the JSON return.  Object representation can be found in the [Statuspage.io docs](https://developer.statuspage.io/#operation/putPagesPageIdComponentsComponentId).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">componentUrl</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="s2">&quot;https://api.statuspage.io/v1/pages/</span><span class="si">{0}</span><span class="s2">/components/</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pageId</span><span class="p">,</span> <span class="n">componentId</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Updating component </span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">componentId</span><span class="p">,</span> <span class="n">payload</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">componentUrl</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">getHeaders</span><span class="p">(),</span>
+                     <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">payload</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">(</span><span class="n">object_hook</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">SimpleNamespace</span><span class="p">(</span><span class="o">**</span><span class="n">d</span><span class="p">))</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="statuspage_io_client.StatusPageClient.updateIncident" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">updateIncident</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">incidentId</span><span class="p">,</span> <span class="n">payload</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Update Incident Information</p>
+<p>Update the given incident using the provided payload as the object body.  The payload object will be processed using <code>json.dumps()</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>incidentId</code></td>
+        <td><code>str</code></td>
+        <td><p>The id of the incident to update.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>payload</code></td>
+        <td><code>object</code></td>
+        <td><p>An object representing the JSON payload.  Valid object representation can be found in the <a href="https://developer.statuspage.io/#operation/patchPagesPageIdIncidentsIncidentId">Statuspage.io docs</a>. </p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>object</code></td>
+      <td><p>A SimpleNamespace object created from the JSON return.  Object representation can be found in the <a href="https://developer.statuspage.io/#operation/patchPagesPageIdIncidentsIncidentId">Statuspage.io docs</a>.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>pi-monitoring\statuspage_io_client.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">updateIncident</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">incidentId</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">payload</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">object</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;  Update Incident Information</span>
+
+<span class="sd">    Update the given incident using the provided payload as the object body.  The payload object will be processed using `json.dumps()`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        incidentId: The id of the incident to update.</span>
+<span class="sd">        payload: An object representing the JSON payload.  Valid object representation can be found in the [Statuspage.io docs](https://developer.statuspage.io/#operation/patchPagesPageIdIncidentsIncidentId). </span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A SimpleNamespace object created from the JSON return.  Object representation can be found in the [Statuspage.io docs](https://developer.statuspage.io/#operation/patchPagesPageIdIncidentsIncidentId).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">incidentUrl</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="s2">&quot;https://api.statuspage.io/v1/pages/</span><span class="si">{0}</span><span class="s2">/incidents/</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pageId</span><span class="p">,</span> <span class="n">incidentId</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Updating incident </span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">incidentUrl</span><span class="p">,</span> <span class="n">incidentId</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span>
+        <span class="n">incidentUrl</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">getHeaders</span><span class="p">(),</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">payload</span><span class="p">))</span>
+    <span class="n">resultObject</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">(</span><span class="n">object_hook</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">SimpleNamespace</span><span class="p">(</span><span class="o">**</span><span class="n">d</span><span class="p">))</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Update Incident Response: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">resultObject</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">resultObject</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
 
 
 

@@ -207,6 +207,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../enums/" class="md-nav__link">
+        Enums
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../healthchecks-reference/" class="md-nav__link">
         HealthChecks
       </a>
@@ -265,6 +280,26 @@
   <a href="#notifications.Notifier" class="md-nav__link">
     Notifier
   </a>
+  
+    <nav class="md-nav" aria-label="Notifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notifications.Notifier.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notifications.Notifier.notify" class="md-nav__link">
+    notify()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -342,6 +377,26 @@
   <a href="#notifications.Notifier" class="md-nav__link">
     Notifier
   </a>
+  
+    <nav class="md-nav" aria-label="Notifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notifications.Notifier.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notifications.Notifier.notify" class="md-nav__link">
+    notify()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -423,6 +478,118 @@
 
 
 
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="notifications.Notifier.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">notifyConfig</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Constructor</p>
+<p>Initialize the instance using the provided <a href="../configuration-reference/#configuration.NotificationSettings">NotificationSettings</a>.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>pi-monitoring\notifications.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">notifyConfig</span><span class="p">:</span> <span class="n">configuration</span><span class="o">.</span><span class="n">NotificationSettings</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Constructor</span>
+
+<span class="sd">    Initialize the instance using the provided [NotificationSettings][configuration.NotificationSettings].</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">notifyConfig</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="notifications.Notifier.notify" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">notify</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subject</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Send notification</p>
+<p>Build and send an email notificaiton using the provided parameters.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>subject</code></td>
+        <td><code>str</code></td>
+        <td><p>The email subject.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>content</code></td>
+        <td><code>str</code></td>
+        <td><p>the email content.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>pi-monitoring\notifications.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">notify</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subject</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Send notification</span>
+
+<span class="sd">    Build and send an email notificaiton using the provided parameters.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        subject: The email subject.</span>
+<span class="sd">        content: the email content.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">smsEmail</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Sending Notification to </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">smsEmail</span><span class="p">)</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">EmailMessage</span><span class="p">()</span>
+        <span class="n">msg</span><span class="o">.</span><span class="n">set_content</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;Subject&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">subject</span>
+        <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;From&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">smtp_sender_id</span>
+        <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;To&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">smsEmail</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">server</span> <span class="o">=</span> <span class="n">smtplib</span><span class="o">.</span><span class="n">SMTP</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">smtp_url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">smtp_port</span><span class="p">)</span>
+            <span class="n">server</span><span class="o">.</span><span class="n">starttls</span><span class="p">()</span>
+            <span class="n">server</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">smtp_sender_id</span><span class="p">,</span>
+                         <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">smtp_sender_pass</span><span class="p">)</span>
+            <span class="n">server</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span>
+                <span class="n">msg</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">smtp_sender_id</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">smsEmail</span><span class="p">)</span>
+            <span class="n">server</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Error sending notification: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+                         <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
 
 
 

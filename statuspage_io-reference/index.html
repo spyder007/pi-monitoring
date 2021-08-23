@@ -207,6 +207,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../enums/" class="md-nav__link">
+        Enums
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../healthchecks-reference/" class="md-nav__link">
         HealthChecks
       </a>
@@ -277,6 +292,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#statuspage_io.Incident" class="md-nav__link">
+    Incident
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statuspage_io.IncidentResult" class="md-nav__link">
+    IncidentResult
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#statuspage_io.StatusPageOperator" class="md-nav__link">
     StatusPageOperator
   </a>
@@ -285,14 +314,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#statuspage_io.StatusPageOperator.checkAndLogIncident" class="md-nav__link">
-    checkAndLogIncident()
+  <a href="#statuspage_io.StatusPageOperator.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statuspage_io.StatusPageOperator.IsConfigured" class="md-nav__link">
+    IsConfigured()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statuspage_io.StatusPageOperator.UpdateComponentStatus" class="md-nav__link">
+    UpdateComponentStatus()
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statuspage_io.StatusResult" class="md-nav__link">
+    StatusResult
+  </a>
   
 </li>
       
@@ -352,6 +402,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#statuspage_io.Incident" class="md-nav__link">
+    Incident
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statuspage_io.IncidentResult" class="md-nav__link">
+    IncidentResult
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#statuspage_io.StatusPageOperator" class="md-nav__link">
     StatusPageOperator
   </a>
@@ -360,14 +424,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#statuspage_io.StatusPageOperator.checkAndLogIncident" class="md-nav__link">
-    checkAndLogIncident()
+  <a href="#statuspage_io.StatusPageOperator.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statuspage_io.StatusPageOperator.IsConfigured" class="md-nav__link">
+    IsConfigured()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statuspage_io.StatusPageOperator.UpdateComponentStatus" class="md-nav__link">
+    UpdateComponentStatus()
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statuspage_io.StatusResult" class="md-nav__link">
+    StatusResult
+  </a>
   
 </li>
       
@@ -404,6 +489,131 @@
 
 
 
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="statuspage_io.Incident" class="doc doc-heading">
+        <code>Incident</code>
+
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Incident Class</p>
+<p>This class represents the details about a Statuspage.io incident</p>
+
+<p><strong>Attributes:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>The incident name.</p></td>
+      </tr>
+      <tr>
+        <td><code>description</code></td>
+        <td><code>str</code></td>
+        <td><p>The incident description.</p></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="statuspage_io.IncidentResult" class="doc doc-heading">
+        <code>IncidentResult</code>
+
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>IncidentResult Class</p>
+<p>This class represents information about incidents created or resolved as part of a status change</p>
+
+<p><strong>Attributes:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>incidentCreated</code></td>
+        <td><code>bool</code></td>
+        <td><p>True if an incident was created, false otherwise.</p></td>
+      </tr>
+      <tr>
+        <td><code>incidentResolved</code></td>
+        <td><code>bool</code></td>
+        <td><p>True if an incident was created, false otherwise.</p></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
 
 
   <div class="doc doc-object doc-class">
@@ -419,7 +629,31 @@
 
     <div class="doc doc-contents ">
 
+      <p>StatusResult Class</p>
+<p>This class represents information about actions taken during a check and update.</p>
 
+<p><strong>Attributes:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>config</code></td>
+        <td><code>StatusPageSettings</code></td>
+        <td><p>An instance of <a href="../configuration-reference/#configuration.StatusPageSettings">StatusPageSettings</a> which contains settings for Statuspage.io communication </p></td>
+      </tr>
+      <tr>
+        <td><code>client</code></td>
+        <td><code>StatusPageClient</code></td>
+        <td><p>An instance of <a href="../statuspage_io_client-reference/#statuspage_io_client.StatusPageClient">StatusPageClient</a>, built from the configuration values provided.</p></td>
+      </tr>
+  </tbody>
+</table>
 
 
 
@@ -438,42 +672,190 @@
 
 
 
-<h3 id="statuspage_io.StatusPageOperator.checkAndLogIncident" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">checkAndLogIncident</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">componentId</span><span class="p">,</span> <span class="n">newComponentStatus</span><span class="p">,</span> <span class="n">incidentDetails</span><span class="p">)</span></code>
+<h3 id="statuspage_io.StatusPageOperator.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">statusPageConfig</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Constructor</p>
+<p>Initialize the instance using the provided <a href="../configuration-reference/#configuration.StatusPageSettings">StatusPageSettings</a>.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>pi-monitoring\statuspage_io.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">statusPageConfig</span><span class="p">:</span> <span class="n">configuration</span><span class="o">.</span><span class="n">StatusPageSettings</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Constructor</span>
+
+<span class="sd">    Initialize the instance using the provided [StatusPageSettings][configuration.StatusPageSettings].</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">statusPageConfig</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">statuspage_io_client</span><span class="o">.</span><span class="n">StatusPageClient</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">apiKey</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">pageId</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="statuspage_io.StatusPageOperator.IsConfigured" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">IsConfigured</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
 </h3>
 
     <div class="doc doc-contents ">
 
-      <p>For now, if it's operational, close open incidents, and if it's not operational, create a new 
-ticket if one isn't already open for this component.  Future state will involve more detail around outage and maintenance</p>
+      <p>Validate configuration data</p>
 
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>bool</code></td>
+      <td><p>True if the operator has a valid configuration, False otherwise.</p></td>
+    </tr>
+  </tbody>
+</table>
         <details class="quote">
           <summary>Source code in <code>pi-monitoring\statuspage_io.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">checkAndLogIncident</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">componentId</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">newComponentStatus</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">incidentDetails</span><span class="p">:</span> <span class="n">Incident</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IncidentResult</span><span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    For now, if it&#39;s operational, close open incidents, and if it&#39;s not operational, create a new </span>
-<span class="sd">    ticket if one isn&#39;t already open for this component.  Future state will involve more detail around outage and maintenance</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">incidentResult</span> <span class="o">=</span> <span class="n">IncidentResult</span><span class="p">()</span>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">IsConfigured</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Validate configuration data</span>
 
-    <span class="n">associatedIncidents</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getAssociatedIncident</span><span class="p">(</span><span class="n">componentId</span><span class="p">)</span>
-    <span class="n">asscIncidentCount</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">associatedIncidents</span><span class="p">)</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Associated Incidents for </span><span class="si">%s</span><span class="s2">: </span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">,</span>
-                <span class="n">componentId</span><span class="p">,</span> <span class="n">asscIncidentCount</span><span class="p">)</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        True if the operator has a valid configuration, False otherwise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">apiKey</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span>
+</code></pre></div>
+        </details>
+    </div>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">newComponentStatus</span> <span class="o">==</span> <span class="s2">&quot;operational&quot;</span> <span class="ow">and</span> <span class="n">asscIncidentCount</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">incident</span> <span class="ow">in</span> <span class="n">associatedIncidents</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">closeIncident</span><span class="p">(</span><span class="n">incident</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
-            <span class="n">incidentResult</span><span class="o">.</span><span class="n">incidentResolved</span> <span class="o">=</span> <span class="kc">True</span>
+  </div>
 
-    <span class="k">elif</span> <span class="p">(</span><span class="n">newComponentStatus</span> <span class="o">==</span> <span class="s2">&quot;major_outage&quot;</span> <span class="ow">and</span> <span class="n">asscIncidentCount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">createIncident</span><span class="p">(</span>
-            <span class="n">componentId</span><span class="p">,</span> <span class="n">newComponentStatus</span><span class="p">,</span> <span class="n">incidentDetails</span><span class="p">)</span>
-        <span class="n">incidentResult</span><span class="o">.</span><span class="n">incidentCreated</span> <span class="o">=</span> <span class="kc">True</span>
 
-    <span class="k">return</span> <span class="n">incidentResult</span>
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="statuspage_io.StatusPageOperator.UpdateComponentStatus" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">UpdateComponentStatus</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">componentId</span><span class="p">,</span> <span class="n">opLevel</span><span class="p">,</span> <span class="n">incidentDetails</span><span class="o">=</span><span class="p">{})</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Update Component Status</p>
+<p>Using the provided OpLevel, determine the component's statuspage.io status. </p>
+<p>If the incoming <code>opLevel</code> is <a href="../enums/#enums.OpLevel">Operational</a> and the statuspage.io status is not, the component's status will be changed to <code>operational</code>, and any open incidents for that component will be resolved.</p>
+<p>If the incoming <code>opLevel</code> is any other value and the statuspage.io status is operational, the component's status will be changed to <code>major_outage</code> and an incident will be created using the provided <code>incidentDetails</code></p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>componentId</code></td>
+        <td><code>str</code></td>
+        <td><p>The component ID to check</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>opLevel</code></td>
+        <td><code>OpLevel</code></td>
+        <td><p>The current OpLevel for the provided component</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>incidentDetails</code></td>
+        <td><code>Incident</code></td>
+        <td><p>An instance of <a href="#statuspage_io.Incident">Incident</a> which has the details of the incident to be created, if necessary.</p></td>
+        <td><code>{}</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>StatusResult</code></td>
+      <td><p>An instance of <a href="#statuspage_io.StatusResult">StatusResult</a></p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>pi-monitoring\statuspage_io.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">UpdateComponentStatus</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">componentId</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">opLevel</span><span class="p">:</span> <span class="n">OpLevel</span><span class="p">,</span> <span class="n">incidentDetails</span><span class="p">:</span> <span class="n">Incident</span> <span class="o">=</span> <span class="p">{})</span> <span class="o">-&gt;</span> <span class="n">StatusResult</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Update Component Status</span>
+
+<span class="sd">    Using the provided OpLevel, determine the component&#39;s statuspage.io status. </span>
+
+<span class="sd">    If the incoming `opLevel` is [Operational][enums.OpLevel] and the statuspage.io status is not, the component&#39;s status will be changed to `operational`, and any open incidents for that component will be resolved.</span>
+
+<span class="sd">    If the incoming `opLevel` is any other value and the statuspage.io status is operational, the component&#39;s status will be changed to `major_outage` and an incident will be created using the provided `incidentDetails`</span>
+
+
+<span class="sd">    Args:</span>
+<span class="sd">        componentId: The component ID to check</span>
+<span class="sd">        opLevel: The current OpLevel for the provided component</span>
+<span class="sd">        incidentDetails: An instance of [Incident][statuspage_io.Incident] which has the details of the incident to be created, if necessary.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        An instance of [StatusResult][statuspage_io.StatusResult]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">opLevel</span> <span class="o">==</span> <span class="n">OpLevel</span><span class="o">.</span><span class="n">Operational</span><span class="p">:</span>
+        <span class="n">componentStatus</span> <span class="o">=</span> <span class="s2">&quot;operational&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">componentStatus</span> <span class="o">=</span> <span class="s2">&quot;major_outage&quot;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">componentStatus</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">component_status_list</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="s2">&quot;Invalid status &#39;</span><span class="si">{0}</span><span class="s2">&#39;.  Valid values are </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">componentStatus</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">component_status_list</span><span class="p">))</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">StatusResult</span><span class="p">()</span>
+    <span class="n">component</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">getComponent</span><span class="p">(</span><span class="n">componentId</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">component</span><span class="o">.</span><span class="n">status</span> <span class="o">!=</span> <span class="n">componentStatus</span><span class="p">):</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">statusChanged</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Changing status from </span><span class="si">%s</span><span class="s2"> to </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+                    <span class="n">component</span><span class="o">.</span><span class="n">status</span><span class="p">,</span> <span class="n">componentStatus</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_updateComponentStatus</span><span class="p">(</span><span class="n">componentId</span><span class="p">,</span> <span class="n">componentStatus</span><span class="p">)</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">incidentResult</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_processIncidentOnStatusChange</span><span class="p">(</span>
+            <span class="n">componentId</span><span class="p">,</span> <span class="n">componentStatus</span><span class="p">,</span> <span class="n">incidentDetails</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span>
 </code></pre></div>
         </details>
     </div>
@@ -484,6 +866,63 @@ ticket if one isn't already open for this component.  Future state will involve 
 
 
 
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="statuspage_io.StatusResult" class="doc doc-heading">
+        <code>StatusResult</code>
+
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>StatusResult Class</p>
+<p>This class represents information about actions taken during a check and update.</p>
+
+<p><strong>Attributes:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>statusChanged</code></td>
+        <td><code>bool</code></td>
+        <td><p>True if the status has changed from the previous check, false otherwise.</p></td>
+      </tr>
+      <tr>
+        <td><code>incidentResult</code></td>
+        <td><code>IncidentResult</code></td>
+        <td><p>An instance of <a href="#statuspage_io.IncidentResult">IncidentResult</a>.</p></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
 
 
 
@@ -496,7 +935,6 @@ ticket if one isn't already open for this component.  Future state will involve 
     </div>
 
   </div>
-
 
 
 
